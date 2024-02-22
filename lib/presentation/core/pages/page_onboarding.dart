@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:loyaute/presentation/core/constants/assets.dart';
 import 'package:loyaute/presentation/core/constants/styles.dart';
 import 'package:loyaute/presentation/core/styles/app_colors.dart';
+import 'package:loyaute/presentation/routes/app_route_paths.dart';
 import 'package:loyaute/presentation/shared/buttons/button_primary.dart';
 
 class PageOnboarding extends StatefulWidget {
@@ -46,7 +48,7 @@ class _PageOnboardingState extends State<PageOnboarding>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary,
-      body: Container(
+      body: SizedBox(
         height: screenHeight,
         width: screenWidth,
         child: Column(
@@ -92,7 +94,9 @@ class _PageOnboardingState extends State<PageOnboarding>
                   margin: EdgeInsets.symmetric(horizontal: 24.w),
                   textStyle: TextStyles.titleMedium.copyWith(
                       color: AppColors.primary, fontWeight: FontWeight.w500),
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(RoutePaths.login);
+                  },
                 ),
                 SizedBox(height: 12.h),
                 Row(

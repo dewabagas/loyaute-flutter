@@ -27,7 +27,7 @@ class AppColors {
   static const Color red2 = Color(0xFFEC0000);
   static const Color pink = Color(0xFFFF5784);
   static const Color alizarin = Color(0xFFe74c3c);
-  static const Color charcoal = Color(0xFF1E1E1E);
+  static const Color charcoal = Color(0xFF272A2D);
   static const Color borderColor = Color(0xFFE8E8E8);
   static const Color paragraphColor = Color(0xFF555555);
   static const Color dividerColor = Color(0xFFE0E0E0);
@@ -41,4 +41,5 @@ class AppColors {
   static const Color darkTosca = Color(0xFF00AA8E);
   static const Color softGreen = Color(0xFFA2FF86);
   static const Color orange = Color(0xFFFBB237);
+  static const Color neutral = Color(0xFF9A9A9A);
 }

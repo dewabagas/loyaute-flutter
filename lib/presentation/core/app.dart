@@ -21,7 +21,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return LifecycleContainer(
         child: ScreenUtilInit(
-      designSize: const Size(360, 640),
+      designSize: const Size(375, 812),
       builder: (context, child) {
         return MaterialApp.router(
           // scaffoldMessengerKey: scaffoldMessengerKey,

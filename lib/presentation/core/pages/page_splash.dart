@@ -18,7 +18,6 @@ class _PageSplashState extends State<PageSplash> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(const Duration(seconds: 1), () async {
-        log('to onboarding');
         GoRouter.of(context).push(RoutePaths.onboarding);
       });
     });
@@ -26,8 +25,6 @@ class _PageSplashState extends State<PageSplash> {
 
   @override
   Widget build(BuildContext context) {
-    log('splash');
-
     return const SizedBox.shrink();
   }
 }

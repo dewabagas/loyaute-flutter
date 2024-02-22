@@ -15,6 +15,8 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  final AppRouter _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
     return LifecycleContainer(
@@ -22,12 +24,16 @@ class _AppState extends State<App> {
       designSize: const Size(360, 640),
       builder: (context, child) {
         return MaterialApp.router(
-          scaffoldMessengerKey: scaffoldMessengerKey,
+          // scaffoldMessengerKey: scaffoldMessengerKey,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light,
           darkTheme: AppTheme.dark,
           builder: EasyLoading.init(),
-          routerConfig: AppRouter().router,
+
+          // routerConfig: AppRouter().router,
+          routerDelegate: _appRouter.router.routerDelegate,
+          routeInformationProvider: _appRouter.router.routeInformationProvider,
+          routeInformationParser: _appRouter.router.routeInformationParser,
         );
       },
     ));

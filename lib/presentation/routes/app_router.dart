@@ -5,7 +5,10 @@ import 'package:loyaute/presentation/core/pages/page_splash.dart';
 import 'package:loyaute/presentation/routes/app_route_paths.dart';
 
 class AppRouter {
-  GoRouter router = GoRouter(
+  final GoRouter router = GoRouter(
+    initialLocation: RoutePaths.splash,
+    routerNeglect: true,
+    // debugLogDiagnostics: true,
     routes: [
       GoRoute(
           path: RoutePaths.splash,

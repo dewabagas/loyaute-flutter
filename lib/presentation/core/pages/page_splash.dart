@@ -19,7 +19,7 @@ class _PageSplashState extends State<PageSplash> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(const Duration(seconds: 1), () async {
         log('to onboarding');
-        context.go(RoutePaths.onboarding);
+        GoRouter.of(context).push(RoutePaths.onboarding);
       });
     });
   }

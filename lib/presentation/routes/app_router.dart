@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:loyaute/presentation/auths/login/page_login.dart';
+import 'package:loyaute/presentation/auths/otp/page_otp.dart';
 import 'package:loyaute/presentation/auths/register/page_register.dart';
 import 'package:loyaute/presentation/core/pages/page_onboarding.dart';
 import 'package:loyaute/presentation/core/pages/page_splash.dart';
@@ -27,6 +28,8 @@ class AppRouter {
       GoRoute(
           path: RoutePaths.register,
           builder: (context, state) => const PageRegister()),
+      GoRoute(
+          path: RoutePaths.otp, builder: (context, state) => const PageOtp()),
     ],
     errorBuilder: (context, state) {
       return Container();

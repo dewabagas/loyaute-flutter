@@ -26,7 +26,9 @@ class _PageLoginState extends State<PageLogin> {
       bottomChild: Align(
         alignment: Alignment.bottomCenter,
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-          ButtonPrimary(title: 'Sign In', onPressed: () {}),
+          ButtonPrimary(
+              title: 'Sign In',
+              onPressed: () => GoRouter.of(context).push(RoutePaths.otp)),
           SizedBox(height: 12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

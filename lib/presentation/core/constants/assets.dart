@@ -5,6 +5,8 @@ class AppLogo {
   static const String icLoyauteFull = 'assets/icons/ic_loyaute_full.svg';
   static const String icLoyauteAlternative =
       'assets/icons/ic_loyaute_alternative.svg';
+  static const String icLoyauteFullAlternative =
+      'assets/icons/ic_loyaute_full_alternative.svg';
 }
 
 class BottomBar {}

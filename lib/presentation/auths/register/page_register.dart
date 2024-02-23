@@ -25,7 +25,9 @@ class _PageRegisterState extends State<PageRegister> {
       bottomChild: Align(
         alignment: Alignment.bottomCenter,
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-          ButtonPrimary(title: 'Create Account', onPressed: () {}),
+          ButtonPrimary(
+              title: 'Create Account',
+              onPressed: () => GoRouter.of(context).push(RoutePaths.otp)),
           SizedBox(height: 12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

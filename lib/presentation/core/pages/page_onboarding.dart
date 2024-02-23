@@ -106,10 +106,15 @@ class _PageOnboardingState extends State<PageOnboarding>
                         style: TextStyles.labelLarge.copyWith(
                             color: AppColors.white,
                             fontWeight: FontWeight.w400)),
-                    Text('Sign Up',
-                        style: TextStyles.labelLarge.copyWith(
-                            color: AppColors.darkBlue,
-                            fontWeight: FontWeight.w700)),
+                    InkWell(
+                      onTap: () {
+                        GoRouter.of(context).push(RoutePaths.register);
+                      },
+                      child: Text('Sign Up',
+                          style: TextStyles.labelLarge.copyWith(
+                              color: AppColors.darkBlue,
+                              fontWeight: FontWeight.w700)),
+                    ),
                   ],
                 ),
                 SizedBox(height: 60.5.h),

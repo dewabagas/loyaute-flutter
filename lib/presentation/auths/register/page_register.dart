@@ -9,34 +9,33 @@ import 'package:loyaute/presentation/routes/app_route_paths.dart';
 import 'package:loyaute/presentation/shared/buttons/button_primary.dart';
 import 'package:loyaute/presentation/shared/inputs/input_primary.dart';
 
-class PageLogin extends StatefulWidget {
-  const PageLogin({super.key});
+class PageRegister extends StatefulWidget {
+  const PageRegister({super.key});
 
   @override
-  State<PageLogin> createState() => _PageLoginState();
+  State<PageRegister> createState() => _PageRegisterState();
 }
 
-class _PageLoginState extends State<PageLogin> {
+class _PageRegisterState extends State<PageRegister> {
   @override
   Widget build(BuildContext context) {
     return AuthWrapper(
-      title: 'Let’s sign You in.',
-      subtitle:
-          'Hey there, fabulous! Ready to kick back and explore? Just a quick sign-in away from unlocking a world of fun.',
+      title: 'Create an account',
+      subtitle: 'New around here? Awesome choice! Let\'s make it official.',
       bottomChild: Align(
         alignment: Alignment.bottomCenter,
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-          ButtonPrimary(title: 'Sign In', onPressed: () {}),
+          ButtonPrimary(title: 'Create Account', onPressed: () {}),
           SizedBox(height: 12.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Haven’t registered yet ? ',
+              Text('Already have an account ? ',
                   style: TextStyles.labelLarge.copyWith(
                       color: AppColors.neutral, fontWeight: FontWeight.w400)),
               InkWell(
-                onTap: () => GoRouter.of(context).push(RoutePaths.register),
-                child: Text('Register',
+                onTap: () => GoRouter.of(context).push(RoutePaths.login),
+                child: Text('Sign In',
                     style: TextStyles.labelLarge.copyWith(
                         color: AppColors.primary, fontWeight: FontWeight.w700)),
               ),
@@ -48,7 +47,27 @@ class _PageLoginState extends State<PageLogin> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const InputPrimary(hintText: 'Name', hasLabel: false),
+          SizedBox(height: 16.h),
           const InputPrimary(hintText: 'Email', hasLabel: false),
+          SizedBox(height: 16.h),
+          InputPrimary(
+              prefixIcon: Container(
+                  margin: EdgeInsets.only(left: 16.w),
+                  width: screenWidth * 0.21,
+                  child: Row(
+                    children: [
+                      Text('+62',
+                          style: TextStyles.labelLarge.copyWith(
+                              color: AppColors.neutral,
+                              fontWeight: FontWeight.w400)),
+                      SizedBox(width: 8.32.w),
+                      const Icon(Icons.keyboard_arrow_down_sharp,
+                          color: AppColors.neutral)
+                    ],
+                  )),
+              hintText: 'Phone Number',
+              hasLabel: false),
           SizedBox(height: 16.h),
           const InputPrimary(hintText: 'Password', hasLabel: false),
           SizedBox(height: 16.h),

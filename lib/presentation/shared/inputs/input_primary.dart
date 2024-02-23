@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:loyaute/presentation/core/constants/styles.dart';
 import 'package:loyaute/presentation/core/styles/app_colors.dart';
 
@@ -20,12 +22,18 @@ class InputPrimary extends StatefulWidget {
   final bool isValidated;
   final bool isFocused;
   final bool isEnabled;
-  final bool obscureText;
   final EdgeInsetsGeometry? contentPadding;
+  final EdgeInsetsGeometry? labelPadding;
   final TextEditingController? controller;
   final FocusNode? focusNode;
   final TextStyle? textStyles;
+  final TextStyle? hintStyles;
   final int? maxLength;
+  final int? minLines;
+  final int? maxLines;
+  final TextCapitalization textCapitalization;
+  final double width;
+  final bool hasLabel;
   const InputPrimary(
       {Key? key,
       this.validator,
@@ -38,6 +46,7 @@ class InputPrimary extends StatefulWidget {
       this.inputFormatters,
       this.isDense,
       this.contentPadding,
+      this.labelPadding,
       this.onSaved,
       this.onChanged,
       this.focusNode,
@@ -45,11 +54,16 @@ class InputPrimary extends StatefulWidget {
       this.isFocused = false,
       this.isValidated = false,
       this.isEnabled = true,
-      this.obscureText = false,
       this.onClear,
       this.textStyles,
+      this.hintStyles,
       this.controller,
-      this.maxLength})
+      this.maxLength,
+      this.minLines,
+      this.maxLines,
+      this.width = double.infinity,
+      this.textCapitalization = TextCapitalization.none,
+      this.hasLabel = true})
       : super(key: key);
 
   @override
@@ -59,51 +73,86 @@ class InputPrimary extends StatefulWidget {
 class _InputPrimaryState extends State<InputPrimary> {
   @override
   Widget build(BuildContext context) {
-    return Focus(
-      onFocusChange: widget.onFocusChange,
-      child: TextFormField(
-        maxLength: widget.maxLength,
-        controller: widget.controller,
-        initialValue: widget.initialValue,
-        textAlign: TextAlign.left,
-        enabled: widget.isEnabled,
-        focusNode: widget.focusNode,
-        obscureText: widget.obscureText,
-        decoration: InputDecoration(
-            hintText: widget.hintText,
-            labelText: widget.label,
-            counter: const SizedBox.shrink(),
-            labelStyle:
-                TextStyles.titleMedium.copyWith(color: AppColors.darkGrey),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.darkGrey, width: 2.0),
+    return Container(
+      width: widget.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          widget.hasLabel
+              ? Padding(
+                  padding: widget.labelPadding ??
+                      EdgeInsets.only(top: 20.h, bottom: 8.h),
+                  child: Text(
+                    widget.label,
+                    style: TextStyles.labelMedium,
+                  ),
+                )
+              : const SizedBox.shrink(),
+          Focus(
+            onFocusChange: widget.onFocusChange,
+            child: TextFormField(
+              textCapitalization: widget.textCapitalization,
+              maxLength: widget.maxLength,
+              controller: widget.controller,
+              initialValue: widget.initialValue,
+              textAlign: TextAlign.left,
+              enabled: widget.isEnabled,
+              focusNode: widget.focusNode,
+              decoration: InputDecoration(
+                  hintText: widget.hintText,
+                  hintStyle: widget.hintStyles ??
+                      TextStyles.labelLarge.copyWith(
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.neutral),
+                  fillColor: AppColors.white,
+                  filled: true,
+                  counter: const SizedBox.shrink(),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        color: AppColors.lightGrey9, width: 1.0),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: AppColors.primary, width: 1.0),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  errorBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: AppColors.red, width: 1.0),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: AppColors.red, width: 1.0),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(
+                        color: AppColors.lightGrey9, width: 1.0),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  contentPadding: widget.contentPadding ??
+                      EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                  isDense: widget.isDense,
+                  prefixIcon: widget.prefixIcon,
+                  suffixIcon: suffixIcons()),
+              style: widget.textStyles ??
+                  TextStyles.labelLarge.copyWith(
+                      color: widget.isEnabled
+                          ? AppColors.neutralDark
+                          : AppColors.neutral,
+                      fontWeight: FontWeight.w400),
+              keyboardType: widget.keyboardType,
+              inputFormatters: widget.inputFormatters,
+              validator: widget.validator,
+              onSaved: widget.onSaved,
+              onChanged: widget.onChanged,
+              minLines: widget.minLines,
+              maxLines: widget.maxLines,
             ),
-            focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.darkGrey, width: 2.0),
-            ),
-            errorBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.lightGrey, width: 2.0),
-            ),
-            focusedErrorBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.red, width: 2.0),
-            ),
-            disabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.darkGrey, width: 2.0),
-            ),
-            contentPadding: widget.contentPadding ?? EdgeInsets.zero,
-            isDense: widget.isDense,
-            prefixIcon: widget.prefixIcon,
-            suffixIcon: widget.suffixIcon ?? suffixIcons()),
-        style: widget.textStyles ??
-            TextStyles.titleMedium.copyWith(
-                color: widget.isEnabled
-                    ? AppColors.darkGrey
-                    : AppColors.lightGrey),
-        keyboardType: widget.keyboardType,
-        inputFormatters: widget.inputFormatters,
-        validator: widget.validator,
-        onSaved: widget.onSaved,
-        onChanged: widget.onChanged,
+          ),
+        ],
       ),
     );
   }

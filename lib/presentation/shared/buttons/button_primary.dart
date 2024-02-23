@@ -67,7 +67,7 @@ class ButtonPrimary extends StatelessWidget {
       child: MaterialButton(
         padding:
             padding ?? EdgeInsets.symmetric(horizontal: 32.w, vertical: 4.h),
-        height: height ?? 44.h,
+        height: height ?? 56.h,
         minWidth: 0,
         onPressed: enabled ? onPressed as void Function()? : null,
         child: isLoading

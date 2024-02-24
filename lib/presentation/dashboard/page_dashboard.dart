@@ -4,6 +4,7 @@ import 'package:loyaute/presentation/core/constants/assets.dart';
 import 'package:loyaute/presentation/core/styles/app_colors.dart';
 import 'package:loyaute/presentation/dashboard/tabs/tab_history.dart';
 import 'package:loyaute/presentation/dashboard/tabs/tab_home.dart';
+import 'package:loyaute/presentation/dashboard/tabs/tab_profile.dart';
 import 'package:loyaute/presentation/shared/others/icon_bottom_nav_bar.dart';
 
 class PageDashboard extends StatefulWidget {
@@ -40,7 +41,7 @@ class _PageDashboardState extends State<PageDashboard> {
     const TabHome(),
     TabHistory(),
     const TabHome(),
-    const TabHome(),
+    const TabProfile(),
   ];
 
   void _onItemTapped(int? index) {

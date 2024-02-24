@@ -36,8 +36,7 @@ class _TabHistoryState extends State<TabHistory>
         leading: const SizedBox.shrink(),
         toolbarHeight: 44.h,
         title: Text('History',
-            style: TextStyles.bodyLarge.copyWith(
-                fontWeight: FontWeight.w700)), // Title di atas tab bar
+            style: TextStyles.bodyLarge.copyWith(fontWeight: FontWeight.w700)),
         bottom: TabBar(
           controller: _tabController,
           dividerColor: AppColors.lightGrey9,

@@ -40,7 +40,8 @@ class AppColors {
   static const Color navy = Color(0xFF172441);
   static const Color darkBlue = Color(0xFF00366C);
   static const Color blue = Color(0xFF0074E0);
-  static const Color softBlue = Color(0xFF9ADCFF);
+  static const Color blue2 = Color(0xFF0C83FC);
+  static const Color softBlue = Color(0xFFD9ECFF);
   static const Color softBlue2 = Color(0xFF73A1F9);
   static const Color darkTosca = Color(0xFF00AA8E);
   static const Color softGreen = Color(0xFFA2FF86);

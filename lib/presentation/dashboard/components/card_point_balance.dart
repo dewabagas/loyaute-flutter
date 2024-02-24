@@ -25,7 +25,6 @@ class _CardPointBalanceState extends State<CardPointBalance> {
           Container(
             height: 182.h,
             width: double.infinity,
-            margin: EdgeInsets.symmetric(horizontal: 24.w),
             padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 17.h),
             decoration: BoxDecoration(
                 color: AppColors.primary,

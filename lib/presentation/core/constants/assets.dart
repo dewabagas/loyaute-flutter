@@ -21,6 +21,12 @@ class AppIcons {
   static const String icHokbenSmall = 'assets/icons/ic_hokben_small.png';
   static const String icMatahariSmall = 'assets/icons/ic_matahari_small.png';
   static const String icPoint = 'assets/icons/ic_point.svg';
+  static const String icSecurity = 'assets/icons/ic_security.svg';
+  static const String icHelpCenter = 'assets/icons/ic_help_center.svg';
+  static const String icLanguage = 'assets/icons/ic_language.svg';
+  static const String icTerms = 'assets/icons/ic_terms.svg';
+  static const String icSettings = 'assets/icons/ic_settings.svg';
+  static const String icPrivacy = 'assets/icons/ic_privacy.svg';
 }
 
 class AppLogo {
@@ -52,6 +58,8 @@ class AppIllustrations {
 
 class AppImages {
   static const String imgPersonMale = 'assets/images/img_person_male.png';
+  static const String imgPersonMaleLarge =
+      'assets/images/img_person_male_large.png';
 }
 
 class AppBanners {

@@ -42,7 +42,7 @@ class ButtonPrimary extends StatelessWidget {
     if (isOutlined) {
       decoration = BoxDecoration(
         border: Border.all(
-            color: enabled ? color ?? AppColors.primary : AppColors.grey),
+            color: enabled ? color ?? AppColors.primary : AppColors.lightGrey9),
         borderRadius: BorderRadius.all(Radius.circular(10.r)),
       );
     } else {

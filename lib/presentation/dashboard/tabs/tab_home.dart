@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:loyaute/presentation/core/constants/assets.dart';
+import 'package:loyaute/presentation/dashboard/components/card_point_balance.dart';
 import 'package:loyaute/presentation/dashboard/components/greeting_section.dart';
 import 'package:loyaute/presentation/dashboard/components/latest_promo_section.dart';
 import 'package:loyaute/presentation/dashboard/components/menu_shortcut_section.dart';
@@ -34,7 +35,9 @@ class _TabHomeState extends State<TabHome> {
                       width: 102.w, height: 19.h)),
             ),
             const GreetingSectionn(),
-            SizedBox(height: 56.h),
+            SizedBox(height: 24.h),
+            CardPointBalance(),
+            SizedBox(height: 40.h),
             const MenuShortcutSection(),
             SizedBox(height: 32.h),
             const LatestPromoSection(),
@@ -43,7 +46,7 @@ class _TabHomeState extends State<TabHome> {
             SizedBox(height: 32.h),
             const RewardSection(),
             SizedBox(height: 24.h),
-            PromoSection()
+            const PromoSection()
           ],
         ),
       ),

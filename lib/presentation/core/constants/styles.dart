@@ -10,6 +10,7 @@ double screenHeight =
 class TextStyles {
   static const TextStyle primaryFont =
       TextStyle(fontFamily: "PlusJakartaSans", fontWeight: FontWeight.w500);
+  static const TextStyle secondaryFont = TextStyle(fontFamily: "OCRAExtended");
 
   static TextStyle get displayLarge => primaryFont.copyWith(
       color: AppColors.primary, fontSize: 57.sp, fontWeight: FontWeight.w700);
@@ -63,4 +64,7 @@ class TextStyles {
 
   static TextStyle get bodyVerySmall => primaryFont.copyWith(
       color: AppColors.charcoal, fontSize: 10.sp, fontWeight: FontWeight.w500);
+
+  static TextStyle get barcode =>
+      secondaryFont.copyWith(color: AppColors.white, fontSize: 12.41.sp);
 }

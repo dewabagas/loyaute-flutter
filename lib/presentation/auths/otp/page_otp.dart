@@ -71,9 +71,6 @@ class _PageOtpState extends State<PageOtp> {
               child: Pinput(
                 autofocus: false,
                 controller: pinController,
-                androidSmsAutofillMethod:
-                    AndroidSmsAutofillMethod.smsUserConsentApi,
-                listenForMultipleSmsOnAndroid: true,
                 showCursor: true,
                 hapticFeedbackType: HapticFeedbackType.lightImpact,
                 defaultPinTheme: defaultPinTheme,
@@ -102,7 +99,8 @@ class _PageOtpState extends State<PageOtp> {
             SizedBox(height: 24.h),
             ButtonPrimary(
                 title: 'Submit',
-                onPressed: () => GoRouter.of(context).push(RoutePaths.register))
+                onPressed: () =>
+                    GoRouter.of(context).push(RoutePaths.dashboard))
           ],
         ),
       ),

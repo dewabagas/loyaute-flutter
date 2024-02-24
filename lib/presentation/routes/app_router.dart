@@ -5,6 +5,7 @@ import 'package:loyaute/presentation/auths/otp/page_otp.dart';
 import 'package:loyaute/presentation/auths/register/page_register.dart';
 import 'package:loyaute/presentation/core/pages/page_onboarding.dart';
 import 'package:loyaute/presentation/core/pages/page_splash.dart';
+import 'package:loyaute/presentation/dashboard/page_dashboard.dart';
 import 'package:loyaute/presentation/routes/app_route_paths.dart';
 
 class AppRouter {
@@ -30,6 +31,11 @@ class AppRouter {
           builder: (context, state) => const PageRegister()),
       GoRoute(
           path: RoutePaths.otp, builder: (context, state) => const PageOtp()),
+
+      // DASHBOARD
+      GoRoute(
+          path: RoutePaths.dashboard,
+          builder: (context, state) => const PageDashboard()),
     ],
     errorBuilder: (context, state) {
       return Container();

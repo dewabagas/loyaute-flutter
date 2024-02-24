@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:loyaute/presentation/core/constants/assets.dart';
 import 'package:loyaute/presentation/core/styles/app_colors.dart';
+import 'package:loyaute/presentation/dashboard/tabs/tab_history.dart';
 import 'package:loyaute/presentation/dashboard/tabs/tab_home.dart';
 import 'package:loyaute/presentation/shared/others/icon_bottom_nav_bar.dart';
 
@@ -37,7 +38,7 @@ class _PageDashboardState extends State<PageDashboard> {
 
   static final List widgetOptions = [
     const TabHome(),
-    const TabHome(),
+    TabHistory(),
     const TabHome(),
     const TabHome(),
   ];

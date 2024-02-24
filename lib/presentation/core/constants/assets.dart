@@ -5,6 +5,22 @@ class AppIcons {
   static const String icQris = 'assets/icons/ic_qris.svg';
   static const String icScan = 'assets/icons/ic_scan.svg';
   static const String icMission = 'assets/icons/ic_mission.svg';
+  static const String icPizzahut = 'assets/icons/ic_pizza_hut.png';
+  static const String icStarbucks = 'assets/icons/ic_starbucks.png';
+  static const String icMcdonald = 'assets/icons/ic_mcdonald.png';
+  static const String icDominos = 'assets/icons/ic_dominos.png';
+  static const String icKfc = 'assets/icons/ic_kfc.png';
+  static const String icFoods = 'assets/icons/ic_foods.png';
+  static const String icGroceries = 'assets/icons/ic_groceries.png';
+  static const String icBeverages = 'assets/icons/ic_beverages.png';
+  static const String icStarbucksSmall = 'assets/icons/ic_starbucks_small.png';
+  static const String icKfcSmall = 'assets/icons/ic_kfc_small.png';
+  static const String icSegariSmall = 'assets/icons/ic_segari_small.png';
+  static const String icDominosSmall = 'assets/icons/ic_dominos_small.png';
+  static const String icMcdonaldSmall = 'assets/icons/ic_mcdonald_small.png';
+  static const String icHokbenSmall = 'assets/icons/ic_hokben_small.png';
+  static const String icMatahariSmall = 'assets/icons/ic_matahari_small.png';
+  static const String icPoint = 'assets/icons/ic_point.svg';
 }
 
 class AppLogo {
@@ -42,4 +58,13 @@ class AppBanners {
   static const String bnrStarbucks = 'assets/banners/bnr_starbuck.png';
   static const String bnrKfc = 'assets/banners/bnr_kfc.png';
   static const String bnrDominos = 'assets/banners/bnr_dominos.png';
+  static const String bnrStarbucksSquare =
+      'assets/banners/bnr_starbucks_square.png';
+  static const String bnrKfcSquare = 'assets/banners/bnr_kfc_square.png';
+  static const String bnrSegariSquare = 'assets/banners/bnr_segari_square.png';
+  static const String bnrDominosSquare =
+      'assets/banners/bnr_dominos_square.png';
+  static const String bnrHokbenSquare = 'assets/banners/bnr_hokben_square.png';
+  static const String bnrMatahariSquare =
+      'assets/banners/bnr_matahari_square.png';
 }

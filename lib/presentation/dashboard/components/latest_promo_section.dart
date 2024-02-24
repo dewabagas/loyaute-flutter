@@ -28,7 +28,7 @@ class _LatestPromoSectionState extends State<LatestPromoSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(bottom: 16.h),
+          padding: EdgeInsets.only(bottom: 16.h, left: 24.w, right: 24.w),
           child: Text(
             'Latest Promo',
             style: TextStyles.titleMedium.copyWith(

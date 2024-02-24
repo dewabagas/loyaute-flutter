@@ -36,7 +36,7 @@ class _TabHomeState extends State<TabHome> {
             ),
             const GreetingSectionn(),
             SizedBox(height: 24.h),
-            CardPointBalance(),
+            const CardPointBalance(),
             SizedBox(height: 40.h),
             const MenuShortcutSection(),
             SizedBox(height: 32.h),

@@ -7,6 +7,7 @@ import 'package:loyaute/presentation/core/pages/page_onboarding.dart';
 import 'package:loyaute/presentation/core/pages/page_splash.dart';
 import 'package:loyaute/presentation/dashboard/page_dashboard.dart';
 import 'package:loyaute/presentation/routes/app_route_paths.dart';
+import 'package:loyaute/presentation/voucher_detail/page_voucher_detail.dart';
 
 class AppRouter {
   final GoRouter router = GoRouter(
@@ -36,6 +37,9 @@ class AppRouter {
       GoRoute(
           path: RoutePaths.dashboard,
           builder: (context, state) => const PageDashboard()),
+      GoRoute(
+          path: RoutePaths.voucherDetail,
+          builder: (context, state) => const PageVoucherDetail()),
     ],
     errorBuilder: (context, state) {
       return Container();

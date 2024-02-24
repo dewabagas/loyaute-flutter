@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:go_router/go_router.dart';
 import 'package:loyaute/presentation/core/constants/assets.dart';
 import 'package:loyaute/presentation/core/constants/styles.dart';
 import 'package:loyaute/presentation/core/styles/app_colors.dart';
+import 'package:loyaute/presentation/routes/app_route_paths.dart';
 
 class LatestPromoSection extends StatefulWidget {
   const LatestPromoSection({Key? key}) : super(key: key);
@@ -81,13 +83,16 @@ class _LatestPromoSectionState extends State<LatestPromoSection> {
   Widget _buildBannerImage(String imageUrl) {
     return Padding(
       padding: EdgeInsets.only(right: 0.w),
-      child: Container(
-        height: 183.h,
-        width: 327.w,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.r),
-          image: DecorationImage(
-            image: AssetImage(imageUrl),
+      child: InkWell(
+        onTap: () => GoRouter.of(context).push(RoutePaths.voucherDetail),
+        child: Container(
+          height: 183.h,
+          width: 327.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.r),
+            image: DecorationImage(
+              image: AssetImage(imageUrl),
+            ),
           ),
         ),
       ),

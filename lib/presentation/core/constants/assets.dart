@@ -67,4 +67,6 @@ class AppBanners {
   static const String bnrHokbenSquare = 'assets/banners/bnr_hokben_square.png';
   static const String bnrMatahariSquare =
       'assets/banners/bnr_matahari_square.png';
+  static const String bnrStarbucksDetail =
+      'assets/banners/bnr_starbucks_detail.png';
 }

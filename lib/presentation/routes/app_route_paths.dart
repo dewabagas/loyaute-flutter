@@ -10,4 +10,5 @@ class RoutePaths {
 
   // DASHBOARD
   static const String dashboard = '/dashboard';
+  static const String voucherDetail = '/voucher-detail';
 }

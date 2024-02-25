@@ -2,15 +2,32 @@
 
 A new Flutter project.
 
+
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to set up the Loyauté Flutter project:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone the Repository: Clone the Loyauté project repository from the GitHub repository.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+  git clone git@github.com:dewabagas/loyaute-flutter.git
+```
+2. Navigate to Project Directory: Move into the Loyauté project directory.    
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+  cd loyaute-flutter
+```
+3. Install Dependencies: Run the following command to install all the necessary dependencies.
+```bash
+  flutter pub get
+```
+## Running the Application
+
+Follow these steps to run the Loyauté application on your local machine:
+
+1. Connect Device: Connect your mobile device or start an emulator.
+2. Run the App: Execute the following command to run the Loyauté app.
+```bash
+  flutter run
+```
+
